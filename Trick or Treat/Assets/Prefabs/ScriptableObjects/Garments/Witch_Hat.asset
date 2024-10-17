@@ -17,3 +17,7 @@ MonoBehaviour:
   prefab: {fileID: 0}
   placement: 0
   type: 0
+  series: 0
+  cute: 5
+  spooky: 3
+  funny: 1

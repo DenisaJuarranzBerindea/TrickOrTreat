@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 
-public class OutfitScritp : MonoBehaviour
+public class OutfitScript : MonoBehaviour
 {
     [SerializeField]
     Garment top;
@@ -61,7 +61,7 @@ public class OutfitScritp : MonoBehaviour
 
 
 
-    Garment getTop() { return top; }
-    Garment getBottom() { return bottom; }
-    Garment getExtra() { return extra; }
+    public Garment getTop() { return top; }
+    public Garment getBottom() { return bottom; }
+    public Garment getExtra() { return extra; }
 }

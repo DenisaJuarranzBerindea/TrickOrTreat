@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 1298367150}
   - component: {fileID: 1298367149}
   - component: {fileID: 1298367148}
+  - component: {fileID: 1298367153}
   m_Layer: 0
   m_Name: renacuajo
   m_TagString: Untagged
@@ -427,6 +428,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298367153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298367147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24fab948e591be498ad75b7e7c55224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  top: {fileID: 11400000, guid: 769be048e1e6b2248a6a23291c466782, type: 2}
+  bottom: {fileID: 11400000, guid: dde46fd3489888a45b9a3547409f5602, type: 2}
+  extra: {fileID: 11400000, guid: 0dae0e04192eb1540b051b4f23345f54, type: 2}
 --- !u!1 &1663293718
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663293719}
+  - component: {fileID: 1663293720}
   m_Layer: 0
   m_Name: PointsManager
   m_TagString: Untagged
@@ -458,6 +475,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663293720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663293718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1297aecdaa5d7ec4799d71931082f5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1912527474
 GameObject:
   m_ObjectHideFlags: 0

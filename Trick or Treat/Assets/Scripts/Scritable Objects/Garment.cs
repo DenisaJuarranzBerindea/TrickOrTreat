@@ -19,9 +19,12 @@ public class Garment : ScriptableObject
 
     // posicion (parte del cuerpo) ENUM
     public PLACEMENT placement;
-    // type
-    public TYPE type;
     // series
     public SERIES series;
+
+
+    public int cute;
+    public int spooky;
+    public int funny;
 
 }

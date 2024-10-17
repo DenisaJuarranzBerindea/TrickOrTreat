@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4845744c4dd4784fa449f0df5ce7ce5, type: 3}
   m_Name: Witch_Broom
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Witch Broom
+  description: A broom to fly towards the moon with!
   prefab: {fileID: 0}
-  placement: 0
+  placement: 2
   type: 0
+  series: 0
+  cute: 5
+  spooky: 2
+  funny: 3
