@@ -3122,6 +3122,7 @@ GameObject:
   - component: {fileID: 447242237}
   - component: {fileID: 447242236}
   - component: {fileID: 447242235}
+  - component: {fileID: 447242238}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -3192,7 +3193,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 447242236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 447242238}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &447242236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3231,6 +3244,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447242233}
   m_CullTransparentMesh: 1
+--- !u!114 &447242238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447242233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 7199977330069947800, guid: 53222688989646d4b9c2e39f71cb4048, type: 3}
+  _playerTransform: {fileID: 595441703}
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &457117559
 GameObject:
   m_ObjectHideFlags: 0
@@ -6417,7 +6445,7 @@ GameObject:
   - component: {fileID: 938008176}
   - component: {fileID: 938008179}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Sombrero de bruja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6549,7 +6577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clothes: {fileID: 7199977330069947800, guid: 53222688989646d4b9c2e39f71cb4048, type: 3}
+  _clothes: {fileID: 11400000, guid: 769be048e1e6b2248a6a23291c466782, type: 2}
   _playerTransform: {fileID: 595441703}
   _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &959480703
