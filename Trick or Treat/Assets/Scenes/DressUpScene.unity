@@ -6549,9 +6549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clothes: {fileID: 4060119482138449492, guid: 9a7a0b12cde996a40aaf048e7b74830f, type: 3}
+  _clothes: {fileID: 7199977330069947800, guid: 53222688989646d4b9c2e39f71cb4048, type: 3}
   _playerTransform: {fileID: 595441703}
-  _offset: {x: 0, y: 40, z: 0}
+  _offset: {x: 0, y: 0, z: 0}
 --- !u!1 &959480703
 GameObject:
   m_ObjectHideFlags: 0
