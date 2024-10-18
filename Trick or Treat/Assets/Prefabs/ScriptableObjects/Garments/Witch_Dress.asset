@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Witch Dress
   description: A magical dress to create your potions in!
-  prefab: {fileID: 7182415767835357083, guid: 8abfaccc44fa5eb40988fab1735d3f9d, type: 3}
+  prefab: {fileID: 4357171903768073905, guid: 59ead966b9490094bb7a13ef6f8e21d6, type: 3}
   placement: 0
   series: 0
   cute: 5
