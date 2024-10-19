@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Arlecchino
   description: Father of the House of Hearth
   prefab: {fileID: 0}
-  type: 1
-  theme: 7
+  cute: 2
+  spooky: 5
+  funny: 1
+  series: 3
   originality: 5

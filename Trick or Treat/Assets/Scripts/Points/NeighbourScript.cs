@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-struct Puntuacion
+public struct Puntuacion
 {
     public int cute, spooky, funny;
 
@@ -18,10 +18,10 @@ public class NeighbourScript : MonoBehaviour
     Neighbour neighbour;
 
 
+   public Neighbour GetNeighbour() { return neighbour; }
+   public void setNeighbout(Neighbour n) {  neighbour = n; }
 
-    void setNeighbout(Neighbour n) {  neighbour = n; }
-
-    Puntuacion judgeCostume(GameObject p)
+   public Puntuacion judgeCostume(GameObject p)
     {
         Puntuacion aux;
         int themeCount = 0;
@@ -48,9 +48,7 @@ public class NeighbourScript : MonoBehaviour
         aux.theme = themeCount;
 
         // ORIGINALIDAD
-        if (themeCount == 3) aux.orig = 0;
-        else if(themeCount == 2) aux.orig = 1;
-        else if(themeCount == 1) aux.orig = 2;
+
         aux.orig = 0;
 
 

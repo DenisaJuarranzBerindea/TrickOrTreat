@@ -15,6 +15,8 @@ MonoBehaviour:
   name: Mrs. MInerva
   description: She likes pumpkins
   prefab: {fileID: 0}
-  type: 0
-  theme: 10
+  cute: 5
+  spooky: 1
+  funny: 1
+  series: 4
   originality: 3

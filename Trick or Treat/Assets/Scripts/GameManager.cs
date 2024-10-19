@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+
 public class GameManager : MonoBehaviour
 {
     /// <summary>
@@ -29,6 +30,10 @@ public class GameManager : MonoBehaviour
     /// Rreferencia al jugador 2.
     /// </summary>
     [SerializeField] GameObject _player2;
+    /// <summary>
+    /// Referencia al vecino actual, en cada ronda cambia;
+    /// </summary>
+    [SerializeField] GameObject _currentNeighbour;
 
 
 
@@ -107,4 +112,65 @@ public class GameManager : MonoBehaviour
             Debug.Log("Enter Start.");
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    #region PUNTOS
+
+
+    public void setNeighbour(GameObject n) { _currentNeighbour = n; }
+
+    public void judgeCostumes()
+    {
+        // puntuaciones de los jugadores
+        Puntuacion p1 = _currentNeighbour.GetComponent<NeighbourScript>().judgeCostume(_player1);
+        Puntuacion p2 = _currentNeighbour.GetComponent<NeighbourScript>().judgeCostume(_player2);
+
+        //
+        bool resultados = decideVerdict(p1, p2);
+    }
+
+    /// <summary>
+    /// devuelve 0 si es el player 1 y 1 si es el 2
+    /// </summary>
+    /// <param name="p1"></param>
+    /// <param name="p2"></param>
+    /// <returns></returns>
+    bool decideVerdict(Puntuacion p1, Puntuacion p2)
+    {
+        int puntos1 = 0, puntos2 = 0;
+
+        Neighbour n = _currentNeighbour.GetComponent<NeighbourScript>().GetNeighbour();
+
+        if (Mathf.Abs(p1.cute - n.cute) > Mathf.Abs(p2.cute - n.cute)) puntos1++;
+        else puntos2++;
+        if (Mathf.Abs(p1.spooky - n.spooky) > Mathf.Abs(p2.spooky - n.spooky)) puntos1++;
+        else puntos2++; 
+        if (Mathf.Abs(p1.cute - n.cute) > Mathf.Abs(p2.cute - n.funny)) puntos1++;
+        else puntos2++;
+
+
+
+        if (puntos1 > puntos2)
+        {
+            return true;
+        }
+    
+        else { 
+            return false;
+        
+        }
+    }
+
+
+    #endregion
 }
