@@ -36,11 +36,22 @@ public class ShowClothes : MonoBehaviour
 
             _prefab.transform.parent = _playerTransform; //Lo hacemos hijo del jugador para que vayan juntos
             dressed = true;
+
+            if (_playerTransform.gameObject.GetComponent<OutfitScript>() != null)
+            {
+                _playerTransform.gameObject.GetComponent<OutfitScript>().addGarment(_clothes, (int)_clothes.placement);
+            }
         }
         else
         {
             Destroy(_prefab.gameObject);
             dressed = false;
+
+
+            if (_playerTransform.gameObject.GetComponent<OutfitScript>() != null)
+            {
+                _playerTransform.gameObject.GetComponent<OutfitScript>().takeOffGarment((int)_clothes.placement);
+            }
         }
         
     }
