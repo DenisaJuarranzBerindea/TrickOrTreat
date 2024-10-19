@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Witch Broom
   description: A broom to fly towards the moon with!
-  prefab: {fileID: 0}
+  prefab: {fileID: 353507626094897603, guid: fb419a5303c8c354b8573212879f7052, type: 3}
   placement: 2
-  type: 0
   series: 0
   cute: 5
   spooky: 2
