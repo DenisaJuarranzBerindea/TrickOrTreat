@@ -13,11 +13,13 @@ public class Neighbour : ScriptableObject
     // modelo 3d
     public GameObject prefab;
 
-    // type
-    public TYPE type;
+    // IDEAL
+    public int cute;
+    public int spooky;
+    public int funny;
 
     //
-    public int theme;          // [1-10]
+    public SERIES series;          // [1-10]
     public int originality;    // [1-10]
 
 }
