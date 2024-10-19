@@ -20,7 +20,7 @@ public class ShowClothes : MonoBehaviour
     private Transform _playerTransform; //Transform del jugador al que se le va a poner la prenda
 
     [SerializeField]
-    private Vector3 _offset;    //Para colocar bien cada prenda
+    private Vector3 _offsetT;    //Para colocar bien cada prenda
 
     #endregion
 
@@ -32,7 +32,7 @@ public class ShowClothes : MonoBehaviour
         if (!dressed)
         {
             //Instanciamos la prenda
-            _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offset, _playerTransform.rotation);
+            _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offsetT, _playerTransform.rotation);
 
             _prefab.transform.parent = _playerTransform; //Lo hacemos hijo del jugador para que vayan juntos
             dressed = true;
