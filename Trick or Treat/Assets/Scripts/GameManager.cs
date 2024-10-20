@@ -10,22 +10,22 @@ public enum RESULT { PLAYER1, PLAYER2, TIE };
 
 public class GameManager : MonoBehaviour
 {
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region referencias:
+
     /// <summary>
     /// Instancia del GameManager.
     /// </summary>
     public static GameManager Instance { get; private set; }
     /// <summary>
+    /// Referencia al UIManager.
+    /// </summary>
+    private UIManager _UIManager;
+    /// <summary>
     /// Enum de estados del juego.
     /// </summary>
-    public enum GameStates { START, GAME, PAUSE, END }
-    /// <summary>
-    /// Estado actual de juego.
-    /// </summary>
-    private GameStates _currentState;
-    /// <summary>
-    /// Siguiente estado.
-    /// </summary>
-    private GameStates _nextState;
+
     /// <summary>
     /// Referencia al jugador 1.
     /// </summary>
@@ -39,15 +39,40 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField] GameObject _currentNeighbour;
 
+    #endregion
 
+    //--------------------------------------------------------------------------------------------------------//
 
+    #region propiedades:
 
+    public enum GameStates { START, GAME, DRESS, END }
+    /// <summary>
+    /// Estado actual de juego.
+    /// </summary>
+    private GameStates _currentState;
+    /// <summary>
+    /// Siguiente estado.
+    /// </summary>
+    private GameStates _nextState;
+    /// <summary>
+    /// Tiempo que falta para vestirse.
+    /// </summary>
+    private float _timeToDress = 20.0f;
+    /// <summary>
+    /// Ronda actual.
+    /// </summary>
+    private int _nRound = 0;
+
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region awake, start y update:
 
     private void Awake()
     {
         Instance = this;
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +82,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Todo esto son pruebas:
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             changeState(GameStates.END);
@@ -69,16 +95,9 @@ public class GameManager : MonoBehaviour
         {
             changeState(GameStates.END);
         }
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.D))
         {
-            if (_currentState != GameStates.PAUSE)
-            {
-                changeState(GameStates.PAUSE);
-            }
-            else
-            {
-                changeState(GameStates.GAME);
-            }
+            changeState(GameStates.DRESS);
         }
         if (Input.GetKeyUp(KeyCode.C))
         {
@@ -91,35 +110,84 @@ public class GameManager : MonoBehaviour
             if (res == RESULT.PLAYER1)
             {
                 Debug.Log("PLAYER 1");
-            }   
-            else if(res == RESULT.PLAYER2)
+                _UIManager.UpdateResultHUD("Player1");
+            }
+            else if (res == RESULT.PLAYER2)
             {
                 Debug.Log("PLAYER 2");
+                _UIManager.UpdateResultHUD("Player2");
             }
-            else { 
+            else
+            {
                 Debug.Log("TIE");
+                _UIManager.UpdateResultHUD("Tie");
             }
         }
+        // Gestion de rondas.
+        if (_currentState == GameStates.DRESS)
+        {
+            if (_timeToDress > 19)
+            {
+                _UIManager.UpdateDressHUD(_timeToDress);
+                _timeToDress -= Time.deltaTime;
+            }
+            else
+            {
+                _nRound++;
+                changeState(GameStates.GAME);
+            }
+        }
+        if (_currentState == GameStates.GAME)
+        {
+            if (_nRound >= 5)
+            {
+                changeState(GameStates.END);
+            }
+            else
+            {
+                _UIManager.UpdateGameHUD(_nRound);
+            }
+        }
+
     }
 
-    public GameStates getCurrentState() { return _currentState; }
-    public void changeState(GameStates state) { _nextState = state; updateState(); }
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region metodos de iniciales:
+
+    public void RegisterUIManager(UIManager uiManager)
+    {
+        _UIManager = uiManager;
+    }
+
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region metodos de estados:
+
+    public void RequestStateChange(GameManager.GameStates newState)
+    {
+        changeState(newState);
+    }
+    public GameStates getCurrentState()
+    {
+        return _currentState;
+    }
+    private void changeState(GameStates state)
+    {
+        _nextState = state;
+        _UIManager.SetMenu(state);
+        updateState();
+    }
     private void updateState()
     {
-        if (_currentState == GameStates.START && _nextState == GameStates.GAME)
+        if (_currentState == GameStates.DRESS && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
             Debug.Log("Enter Game.");
-        }
-        else if (_currentState == GameStates.GAME && _nextState == GameStates.PAUSE)
-        {
-            _currentState = _nextState;
-            Debug.Log("Enter Pause.");
-        }
-        else if (_currentState == GameStates.PAUSE && _nextState == GameStates.GAME)
-        {
-            _currentState = _nextState;
-            Debug.Log("Exit Pause.");
         }
         else if (_currentState == GameStates.GAME && _nextState == GameStates.END)
         {
@@ -131,13 +199,27 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             Debug.Log("Enter Start.");
         }
+        else if (_currentState == GameStates.START || _currentState == GameStates.GAME && _nextState == GameStates.DRESS)
+        {
+            _currentState = _nextState;
+            _timeToDress = 20.0f;
+            Debug.Log("Enter Dress.");
+        }
     }
 
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region metodos de UI:
 
 
+
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
 
     #region PUNTOS
-
 
     public void setNeighbour(GameObject n) { _currentNeighbour = n; }
 
@@ -167,9 +249,9 @@ public class GameManager : MonoBehaviour
 
         // la diferencia minima, sin contar los iguales
         if (Mathf.Abs(p1.cute - n.cute) > Mathf.Abs(p2.cute - n.cute)) puntos1++;
-        else if((Mathf.Abs(p1.cute - n.cute) < Mathf.Abs(p2.cute - n.cute))) puntos2++;
+        else if ((Mathf.Abs(p1.cute - n.cute) < Mathf.Abs(p2.cute - n.cute))) puntos2++;
         if (Mathf.Abs(p1.spooky - n.spooky) > Mathf.Abs(p2.spooky - n.spooky)) puntos1++;
-        else if (Mathf.Abs(p1.spooky - n.spooky) > Mathf.Abs(p2.spooky - n.spooky)) puntos2++; 
+        else if (Mathf.Abs(p1.spooky - n.spooky) > Mathf.Abs(p2.spooky - n.spooky)) puntos2++;
         if (Mathf.Abs(p1.funny - n.funny) > Mathf.Abs(p2.funny - n.funny)) puntos1++;
         else if (Mathf.Abs(p1.funny - n.funny) > Mathf.Abs(p2.funny - n.funny)) puntos2++;
 
@@ -185,6 +267,7 @@ public class GameManager : MonoBehaviour
         else return RESULT.TIE;
     }
 
-
     #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
 }
