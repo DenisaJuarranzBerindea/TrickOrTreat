@@ -38,13 +38,19 @@ public class GameManager : MonoBehaviour
     /// Referencia al vecino actual, en cada ronda cambia;
     /// </summary>
     [SerializeField] GameObject _currentNeighbour;
-
-
-
-    // referencias 
-
+    /// <summary>
+    ///  referencia al objeto con todo lo del dressup
+    /// </summary>
     [SerializeField] GameObject _dressup;
+    /// <summary>
+    /// referencia al objetos con los players
+    /// </summary>
     [SerializeField] GameObject _players;
+    /// <summary>
+    /// referencia al array de posibles vecinos
+    /// </summary>
+    [SerializeField] GameObject[] _neighbours;
+
     #endregion
 
     //--------------------------------------------------------------------------------------------------------//
