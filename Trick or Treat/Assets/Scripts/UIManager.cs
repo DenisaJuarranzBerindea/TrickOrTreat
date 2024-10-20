@@ -135,6 +135,12 @@ public class UIManager : MonoBehaviour
         _resultTMP.text = result + "";
     }
 
+    public void buttonExit()
+    {
+        Debug.Log("Adios.");
+        Application.Quit();
+    }
+
     #endregion
 
     //--------------------------------------------------------------------------------------------------------//
