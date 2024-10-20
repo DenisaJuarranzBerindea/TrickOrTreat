@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField] GameObject _currentNeighbour;
 
+
+
+    // referencias 
+
+    [SerializeField] GameObject _dressup;
+    [SerializeField] GameObject _players;
     #endregion
 
     //--------------------------------------------------------------------------------------------------------//
@@ -187,6 +193,8 @@ public class GameManager : MonoBehaviour
         if (_currentState == GameStates.DRESS && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
+            setUpDressUp(false);
+
             Debug.Log("Enter Game.");
         }
         else if (_currentState == GameStates.GAME && _nextState == GameStates.END)
@@ -203,6 +211,7 @@ public class GameManager : MonoBehaviour
         {
             _currentState = _nextState;
             _timeToDress = 20.0f;
+            setUpDressUp(true);
             Debug.Log("Enter Dress.");
         }
     }
@@ -270,4 +279,19 @@ public class GameManager : MonoBehaviour
     #endregion
 
     //--------------------------------------------------------------------------------------------------------//
+
+
+    #region setup
+
+
+    void setUpDressUp(bool a)
+    {
+        _dressup.SetActive(a);
+        _players.SetActive(a);
+    }
+
+    #endregion
+
+
+
 }
