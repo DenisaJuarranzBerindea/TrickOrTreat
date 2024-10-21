@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     /// Tiempo que falta para vestirse.
     /// </summary>
     private float _timeToDress = 20.0f;
+    private float _resultTime = 5.0f;
     /// <summary>
     /// Ronda actual.
     /// </summary>
@@ -156,7 +157,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 _nRound++;
-                changeState(GameStates.GAME);
+                changeState(GameStates.RESULT);
             }
         }
         if (_currentState == GameStates.GAME)
@@ -168,6 +169,20 @@ public class GameManager : MonoBehaviour
             else
             {
                 _UIManager.UpdateGameHUD(_nRound);
+            }
+        }
+        if (_currentState == GameStates.RESULT)
+        {
+            if (_resultTime > 5)
+            {
+                Debug.Log("END AQUI FALTAN LOS RESULTADOS");
+                _resultTime -= Time.deltaTime;
+
+            }
+            else
+            {
+                changeState(GameStates.GAME);
+
             }
         }
 

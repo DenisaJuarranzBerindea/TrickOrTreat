@@ -6532,7 +6532,10 @@ MonoBehaviour:
   _result: {fileID: 1811342124}
   _game: {fileID: 495907442}
   _players: {fileID: 1535205592}
-  _neighbours: []
+  _neighbours:
+  - {fileID: 8009311034155823759, guid: f6b2605abbf7e1e4299ff526b756e70f, type: 3}
+  - {fileID: 4402379168750050556, guid: c4aba3f06199ad4459632b983df458d9, type: 3}
+  - {fileID: 3368788668190831886, guid: ee8a58b0fd8d4ae49a4098b52c21681a, type: 3}
 --- !u!4 &804069951
 Transform:
   m_ObjectHideFlags: 0
@@ -6804,7 +6807,7 @@ GameObject:
   - component: {fileID: 840956582}
   - component: {fileID: 840956581}
   m_Layer: 0
-  m_Name: Neighbour
+  m_Name: Neighbour_Wicth_Lady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6822,7 +6825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534a6141bf5394146b6ac40291a28f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbour: {fileID: 11400000, guid: c9c7740f90078b14b87e5423071ec25c, type: 2}
+  neighbour: {fileID: 11400000, guid: e336a3de21ef89049aafbc32b9a8ecc2, type: 2}
 --- !u!4 &840956582
 Transform:
   m_ObjectHideFlags: 0
@@ -15037,7 +15040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1954341326
 Transform:
   m_ObjectHideFlags: 0
