@@ -38,6 +38,18 @@ public class GameManager : MonoBehaviour
     /// Referencia al vecino actual, en cada ronda cambia;
     /// </summary>
     [SerializeField] GameObject _currentNeighbour;
+    /// <summary>
+    ///  referencia al objeto con todo lo del dressup
+    /// </summary>
+    [SerializeField] GameObject _dressup;
+    /// <summary>
+    /// referencia al objetos con los players
+    /// </summary>
+    [SerializeField] GameObject _players;
+    /// <summary>
+    /// referencia al array de posibles vecinos
+    /// </summary>
+    [SerializeField] GameObject[] _neighbours;
 
     #endregion
 
@@ -187,6 +199,8 @@ public class GameManager : MonoBehaviour
         if (_currentState == GameStates.DRESS && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
+            setUpDressUp(false);
+
             Debug.Log("Enter Game.");
         }
         else if (_currentState == GameStates.GAME && _nextState == GameStates.END)
@@ -203,6 +217,7 @@ public class GameManager : MonoBehaviour
         {
             _currentState = _nextState;
             _timeToDress = 20.0f;
+            setUpDressUp(true);
             Debug.Log("Enter Dress.");
         }
     }
@@ -270,4 +285,19 @@ public class GameManager : MonoBehaviour
     #endregion
 
     //--------------------------------------------------------------------------------------------------------//
+
+
+    #region setup
+
+
+    void setUpDressUp(bool a)
+    {
+        _dressup.SetActive(a);
+        _players.SetActive(a);
+    }
+
+    #endregion
+
+
+
 }
