@@ -1,8 +1,10 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
+
 
 
 
@@ -41,7 +43,15 @@ public class GameManager : MonoBehaviour
     /// <summary>
     ///  referencia al objeto con todo lo del dressup
     /// </summary>
-    [SerializeField] GameObject _dressup;
+    [SerializeField] GameObject _dressup;    
+    /// <summary>
+    ///  referencia al objeto con todo lo del resultado
+    /// </summary>
+    [SerializeField] GameObject _result;    
+    /// <summary>
+    ///  referencia al objeto con todo lo de enseñar las casas
+    /// </summary>
+    [SerializeField] GameObject _game;
     /// <summary>
     /// referencia al objetos con los players
     /// </summary>
@@ -57,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     #region propiedades:
 
-    public enum GameStates { START, GAME, DRESS, END }
+    public enum GameStates { START, GAME, DRESS, RESULT, END }
     /// <summary>
     /// Estado actual de juego.
     /// </summary>
@@ -196,10 +206,11 @@ public class GameManager : MonoBehaviour
     }
     private void updateState()
     {
-        if (_currentState == GameStates.DRESS && _nextState == GameStates.GAME)
+        if (_currentState == GameStates.RESULT && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
-            setUpDressUp(false);
+            setUpResult(false);
+            setUpGame(true);
 
             Debug.Log("Enter Game.");
         }
@@ -217,8 +228,16 @@ public class GameManager : MonoBehaviour
         {
             _currentState = _nextState;
             _timeToDress = 20.0f;
+            setUpGame(false);
             setUpDressUp(true);
             Debug.Log("Enter Dress.");
+        }        
+        else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.RESULT)
+        {
+            _currentState = _nextState;
+            setUpResult(true);
+            setUpDressUp(false);
+            Debug.Log("Enter result.");
         }
     }
 
@@ -294,6 +313,28 @@ public class GameManager : MonoBehaviour
     {
         _dressup.SetActive(a);
         _players.SetActive(a);
+    }
+
+    void generateNewNeighbour()
+    {
+        var negih = _neighbours[Random.Range(0, _neighbours.Length)];
+        _currentNeighbour = negih;
+    }
+
+    void setUpResult(bool a)
+    {
+        _result.SetActive(a);
+
+        int aux = (int)judgeCostumes();
+        Debug.Log(aux);
+        
+    }
+
+
+    void setUpGame(bool a) 
+    {
+        generateNewNeighbour();
+        _game.SetActive(a);        
     }
 
     #endregion
