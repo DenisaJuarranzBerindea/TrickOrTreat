@@ -31,6 +31,11 @@ public class UIManager : MonoBehaviour
     /// </summary>
     [SerializeField] private GameObject _gameMenu;
     /// <summary>
+    /// Objeto End.
+    /// </summary>
+    [SerializeField] private GameObject _neighbourMenu;
+
+    /// <summary>
     /// Objeto Dress.
     /// </summary>
     [SerializeField] private GameObject _dressMenu;
@@ -85,6 +90,8 @@ public class UIManager : MonoBehaviour
 
     public void RequestStateChange(int newState)
     {
+
+        Debug.Log((GameManager.GameStates)newState);
         GameManager.Instance.RequestStateChange((GameManager.GameStates)newState);
     }
 
@@ -97,6 +104,8 @@ public class UIManager : MonoBehaviour
             _gameMenu.SetActive(false);
             _dressMenu.SetActive(false);
             _endMenu.SetActive(false);
+            _neighbourMenu.SetActive(false);
+
         }
         else if (newMenu == GameManager.GameStates.GAME)
         {
@@ -104,6 +113,8 @@ public class UIManager : MonoBehaviour
             _gameMenu.SetActive(true);
             _dressMenu.SetActive(false);
             _endMenu.SetActive(false);
+            _neighbourMenu.SetActive(false);
+
         }
         else if (newMenu == GameManager.GameStates.END)
         {
@@ -111,6 +122,8 @@ public class UIManager : MonoBehaviour
             _gameMenu.SetActive(false);
             _dressMenu.SetActive(false);
             _endMenu.SetActive(true);
+            _neighbourMenu.SetActive(false);
+
         }
         else if (newMenu == GameManager.GameStates.DRESS)
         {
@@ -118,6 +131,16 @@ public class UIManager : MonoBehaviour
             _gameMenu.SetActive(false);
             _dressMenu.SetActive(true);
             _endMenu.SetActive(false);
+            _neighbourMenu.SetActive(false);
+
+        }
+        else if (newMenu == GameManager.GameStates.NEIGHBOUR)
+        {
+            _mainMenu.SetActive(false);
+            _gameMenu.SetActive(false);
+            _dressMenu.SetActive(false);
+            _endMenu.SetActive(false);
+            _neighbourMenu.SetActive(true);
         }
     }
     public void UpdateDressHUD(float remainingTime)
