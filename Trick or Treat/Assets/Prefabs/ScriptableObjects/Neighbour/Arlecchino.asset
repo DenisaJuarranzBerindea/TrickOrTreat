@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Arlecchino
   description: Father of the House of Hearth
-  prefab: {fileID: 0}
+  prefab: {fileID: 1807076541398925895, guid: faec44a49a9ba8c43b6d6aff89c2accd, type: 3}
   cute: 2
   spooky: 5
   funny: 1

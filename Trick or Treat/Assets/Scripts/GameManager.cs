@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     ///  referencia al objeto con todo lo del dressup
     /// </summary>
+    [SerializeField] GameObject _currentHouse;
+    /// <summary>
+    ///  referencia al objeto con todo lo del dressup
+    /// </summary>
     [SerializeField] GameObject _dressup;    
     /// <summary>
     ///  referencia al objeto con todo lo del resultado
@@ -55,7 +59,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     ///  referencia al objeto con todo lo de enseñar las casas
     /// </summary>
-    [SerializeField] GameObject _uiNeighbour;
+    [SerializeField] GameObject _Neighbour;
     /// <summary>
     /// referencia al objetos con los players
     /// </summary>
@@ -379,7 +383,18 @@ public class GameManager : MonoBehaviour
 
     void setUpNeighbour(bool a)
     {
-        _uiNeighbour.SetActive(a);
+        _Neighbour.SetActive(a);
+
+        if (a)
+        {
+            _currentHouse = Instantiate(_currentNeighbour.GetComponent<NeighbourScript>().GetNeighbour().prefab, _Neighbour.GetComponent<Transform>());
+            _currentHouse.GetComponent<Transform>().localScale *= 100;
+        }
+        else
+        {
+            Destroy(_currentHouse);
+
+        }
     }
 
 

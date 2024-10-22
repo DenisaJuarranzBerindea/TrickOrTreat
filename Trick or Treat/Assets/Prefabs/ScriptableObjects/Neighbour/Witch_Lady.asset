@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Witch Lady
   description: aaaaaaaaaaaaaa
-  prefab: {fileID: 0}
+  prefab: {fileID: 2115056065231421629, guid: 112a420847ef5bf42bea53123d5a1d6a, type: 3}
   cute: 4
   spooky: 2
   funny: 1
