@@ -2443,7 +2443,7 @@ GameObject:
   - component: {fileID: 319838017}
   - component: {fileID: 319838020}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2898,7 @@ GameObject:
   - component: {fileID: 411333453}
   - component: {fileID: 411333456}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Traje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4767,8 +4767,9 @@ GameObject:
   - component: {fileID: 648094188}
   - component: {fileID: 648094187}
   - component: {fileID: 648094186}
+  - component: {fileID: 648094189}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Traje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4837,7 +4838,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648094187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 648094189}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648094187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4876,6 +4889,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648094184}
   m_CullTransparentMesh: 1
+--- !u!114 &648094189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648094184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 3fcd551f5dc87ac46b20011f936b0497, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0.5, y: 10, z: -2}
 --- !u!1 &679583522
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,8 +7594,9 @@ GameObject:
   - component: {fileID: 1055091870}
   - component: {fileID: 1055091869}
   - component: {fileID: 1055091868}
+  - component: {fileID: 1055091871}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7636,7 +7665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1055091869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1055091871}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1055091869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7675,6 +7716,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055091866}
   m_CullTransparentMesh: 1
+--- !u!114 &1055091871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055091866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 9f50f08af38cdf644a7f9039ce48e1ad, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 18, y: 17, z: 0}
 --- !u!1 &1058371206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10887,7 +10943,7 @@ GameObject:
   - component: {fileID: 1638150786}
   - component: {fileID: 1638150789}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11032,7 +11088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652129063}
   m_Layer: 5
-  m_Name: Botones (2)
+  m_Name: Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
