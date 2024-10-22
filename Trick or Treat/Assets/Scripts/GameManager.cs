@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField] GameObject _game;
     /// <summary>
+    ///  referencia al objeto con todo lo de enseñar las casas
+    /// </summary>
+    [SerializeField] GameObject _uiNeighbour;
+    /// <summary>
     /// referencia al objetos con los players
     /// </summary>
     [SerializeField] GameObject _players;
@@ -67,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     #region propiedades:
 
-    public enum GameStates { START, GAME, DRESS, RESULT, END }
+    public enum GameStates { START, GAME, NEIGHBOUR, DRESS, RESULT, END }
     /// <summary>
     /// Estado actual de juego.
     /// </summary>
@@ -80,6 +84,7 @@ public class GameManager : MonoBehaviour
     /// Tiempo que falta para vestirse.
     /// </summary>
     private float _timeToDress = 20.0f;
+    private float _neighbourtime = 5.0f;
     private float _resultTime = 5.0f;
     /// <summary>
     /// Ronda actual.
@@ -168,7 +173,22 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+
                 _UIManager.UpdateGameHUD(_nRound);
+            }
+        }
+        if (_currentState == GameStates.NEIGHBOUR)
+        {
+            if (_neighbourtime > 0)
+            {
+                //Debug.Log("GAME DENISIEST PART");
+
+                _neighbourtime -= Time.deltaTime;
+            }
+            else
+            {
+                _nRound++;
+                changeState(GameStates.DRESS);
             }
         }
         if (_currentState == GameStates.RESULT)
@@ -221,6 +241,8 @@ public class GameManager : MonoBehaviour
     }
     private void updateState()
     {
+        Debug.Log(_nextState + " hola");
+
         if (_currentState == GameStates.RESULT && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
@@ -239,14 +261,30 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             Debug.Log("Enter Start.");
         }
-        else if (_currentState == GameStates.START || _currentState == GameStates.GAME && _nextState == GameStates.DRESS)
+        else if (_currentState == GameStates.START || _currentState == GameStates.GAME && _nextState == GameStates.NEIGHBOUR)
+        {
+            _currentState = _nextState;
+            setUpGame(false);
+            setUpNeighbour(true);
+            _neighbourtime = 5.0f;
+
+            Debug.Log("Enter Neighbour.");
+        }
+        else if (_currentState == GameStates.NEIGHBOUR || _currentState == GameStates.NEIGHBOUR && _nextState == GameStates.DRESS)
         {
             _currentState = _nextState;
             _timeToDress = 20.0f;
-            setUpGame(false);
             setUpDressUp(true);
+            setUpNeighbour(false);
             Debug.Log("Enter Dress.");
-        }        
+        }
+        else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.GAME)
+        {
+            _currentState = _nextState;
+            setUpGame(true);
+            setUpDressUp(false);
+            Debug.Log("Enter game");
+        }
         else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.RESULT)
         {
             _currentState = _nextState;
@@ -254,6 +292,15 @@ public class GameManager : MonoBehaviour
             setUpDressUp(false);
             Debug.Log("Enter result.");
         }
+        else if (_currentState == GameStates.GAME || _currentState == GameStates.GAME && _nextState == GameStates.NEIGHBOUR)
+        {
+            _currentState = _nextState;
+            setUpGame(false);
+            setUpNeighbour(true);
+            _neighbourtime = 5.0f;
+            Debug.Log("HOLA PAIGROOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+        }
+
     }
 
     #endregion
@@ -329,6 +376,12 @@ public class GameManager : MonoBehaviour
         _dressup.SetActive(a);
         _players.SetActive(a);
     }
+
+    void setUpNeighbour(bool a)
+    {
+        _uiNeighbour.SetActive(a);
+    }
+
 
     void generateNewNeighbour()
     {
