@@ -181,7 +181,7 @@ public class GameManager : MonoBehaviour
         {
             if (_neighbourtime > 0)
             {
-                Debug.Log("GAME DENISIEST PART");
+                //Debug.Log("GAME DENISIEST PART");
 
                 _neighbourtime -= Time.deltaTime;
             }
@@ -241,6 +241,8 @@ public class GameManager : MonoBehaviour
     }
     private void updateState()
     {
+        Debug.Log(_nextState + " hola");
+
         if (_currentState == GameStates.RESULT && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
@@ -264,6 +266,8 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             setUpGame(false);
             setUpNeighbour(true);
+            _neighbourtime = 5.0f;
+
             Debug.Log("Enter Neighbour.");
         }
         else if (_currentState == GameStates.NEIGHBOUR || _currentState == GameStates.NEIGHBOUR && _nextState == GameStates.DRESS)
@@ -293,7 +297,8 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             setUpGame(false);
             setUpNeighbour(true);
-            Debug.Log("Enter result.");
+            _neighbourtime = 5.0f;
+            Debug.Log("HOLA PAIGROOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
         }
 
     }

@@ -90,8 +90,6 @@ public class UIManager : MonoBehaviour
 
     public void RequestStateChange(int newState)
     {
-
-        Debug.Log((GameManager.GameStates)newState);
         GameManager.Instance.RequestStateChange((GameManager.GameStates)newState);
     }
 
