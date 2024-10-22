@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   description: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 5086701261158783324, guid: 4fe3ada572dc2124f8bf3751ca3938d5, type: 3}
   placement: 0
   series: 0
   cute: 0
