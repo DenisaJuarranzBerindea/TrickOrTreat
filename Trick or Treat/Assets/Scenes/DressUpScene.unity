@@ -269,8 +269,9 @@ GameObject:
   - component: {fileID: 93403945}
   - component: {fileID: 93403944}
   - component: {fileID: 93403943}
+  - component: {fileID: 93403946}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Traje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93403944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 93403946}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93403944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +391,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93403941}
   m_CullTransparentMesh: 1
+--- !u!114 &93403946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93403941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: fd85a06492564cf4fbca30d4ffc1067e, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &103379956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,8 +1853,9 @@ GameObject:
   - component: {fileID: 286149330}
   - component: {fileID: 286149329}
   - component: {fileID: 286149328}
+  - component: {fileID: 286149331}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1895,7 +1924,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 286149329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 286149331}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &286149329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1934,6 +1975,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286149326}
   m_CullTransparentMesh: 1
+--- !u!114 &286149331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286149326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 42bace9f066d3844fbafb6ea3be6d4c1, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &286155292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,8 +2002,9 @@ GameObject:
   - component: {fileID: 286155296}
   - component: {fileID: 286155295}
   - component: {fileID: 286155294}
+  - component: {fileID: 286155297}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2016,7 +2073,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 286155295}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 286155297}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &286155295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,6 +2124,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286155292}
   m_CullTransparentMesh: 1
+--- !u!114 &286155297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286155292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 829f8a1760276e44a91092a74f96625d, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &294936678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,7 +2834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375391565}
   m_Layer: 5
-  m_Name: Botones (6)
+  m_Name: Momia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3851,8 +3935,9 @@ GameObject:
   - component: {fileID: 525302156}
   - component: {fileID: 525302155}
   - component: {fileID: 525302154}
+  - component: {fileID: 525302157}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3921,7 +4006,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525302155}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 525302157}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &525302155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3960,6 +4057,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525302152}
   m_CullTransparentMesh: 1
+--- !u!114 &525302157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525302152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 66d2f1b3bfdc1d1438632c1576e9305f, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &569812362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,8 +5326,9 @@ GameObject:
   - component: {fileID: 702007814}
   - component: {fileID: 702007813}
   - component: {fileID: 702007812}
+  - component: {fileID: 702007815}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Traje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5284,7 +5397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 702007813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 702007815}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &702007813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5323,6 +5448,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702007810}
   m_CullTransparentMesh: 1
+--- !u!114 &702007815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702007810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 1d50c30dc97ef1f478acbfeb69d5cc03, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &728654108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,8 +6256,9 @@ GameObject:
   - component: {fileID: 854374074}
   - component: {fileID: 854374073}
   - component: {fileID: 854374072}
+  - component: {fileID: 854374075}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Extra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6186,7 +6327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854374073}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 854374075}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &854374073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6225,6 +6378,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854374070}
   m_CullTransparentMesh: 1
+--- !u!114 &854374075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854374070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 6c95fbbf8ae92f244b4e2c3e61a8aac5, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1001 &877644383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9869,7 +10037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377971617}
   m_Layer: 5
-  m_Name: Botones (5)
+  m_Name: Fantasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10566,8 +10734,9 @@ GameObject:
   - component: {fileID: 1508904504}
   - component: {fileID: 1508904503}
   - component: {fileID: 1508904502}
+  - component: {fileID: 1508904505}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10636,7 +10805,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1508904503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1508904505}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1508904503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10675,6 +10856,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508904500}
   m_CullTransparentMesh: 1
+--- !u!114 &1508904505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508904500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 07bd35b5960b21e4096495e706fe197c, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &1575924148
 GameObject:
   m_ObjectHideFlags: 0
@@ -11356,7 +11552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807845756}
   m_Layer: 5
-  m_Name: Botones (4)
+  m_Name: Diablo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12123,8 +12319,9 @@ GameObject:
   - component: {fileID: 2011600183}
   - component: {fileID: 2011600182}
   - component: {fileID: 2011600181}
+  - component: {fileID: 2011600184}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Traje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12193,7 +12390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2011600182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2011600184}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2011600182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12232,6 +12441,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011600179}
   m_CullTransparentMesh: 1
+--- !u!114 &2011600184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011600179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: a5812fc0080e94a4e8d79230951c8db1, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &2029756716
 GameObject:
   m_ObjectHideFlags: 0
@@ -12378,8 +12602,9 @@ GameObject:
   - component: {fileID: 2036182373}
   - component: {fileID: 2036182372}
   - component: {fileID: 2036182371}
+  - component: {fileID: 2036182374}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12448,7 +12673,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2036182372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2036182374}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2036182372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12487,6 +12724,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036182369}
   m_CullTransparentMesh: 1
+--- !u!114 &2036182374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036182369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 451188e1a9b4f3c4d813b16cb3b29b27, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1001 &2113443103
 PrefabInstance:
   m_ObjectHideFlags: 0
