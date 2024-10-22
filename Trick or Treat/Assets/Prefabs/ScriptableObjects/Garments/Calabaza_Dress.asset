@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4845744c4dd4784fa449f0df5ce7ce5, type: 3}
-  m_Name: Witch_Dress
+  m_Name: Calabaza_Dress
   m_EditorClassIdentifier: 
-  name: Witch Dress
-  description: A magical dress to create your potions in!
-  prefab: {fileID: 2536093696529556697, guid: f50d4abd1dfc7f44ab90d188a2f91dca, type: 3}
+  name: 
+  description: 
+  prefab: {fileID: 4087489755049598223, guid: 0bf9985d1fb8c934db7b365d34e828ac, type: 3}
   placement: 1
   series: 0
-  cute: 5
-  spooky: 1
-  funny: 1
+  cute: 0
+  spooky: 0
+  funny: 0
