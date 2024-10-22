@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3583,7 +3583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 42bace9f066d3844fbafb6ea3be6d4c1, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: 0, z: -5}
 --- !u!1 &286155292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,7 +3732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 829f8a1760276e44a91092a74f96625d, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: 0, z: -2}
 --- !u!1 &294936678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,7 +9210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 3fcd551f5dc87ac46b20011f936b0497, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0.5, y: 10, z: -2}
+  _offsetT: {x: 0.5, y: 11, z: -2}
 --- !u!1 &676446074
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,7 +10018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 1d50c30dc97ef1f478acbfeb69d5cc03, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 1.1, y: 0, z: -3}
 --- !u!1 &706848178
 GameObject:
   m_ObjectHideFlags: 0
