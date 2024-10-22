@@ -1,4 +1,5 @@
 //using System;
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -68,6 +69,13 @@ public class GameManager : MonoBehaviour
     /// referencia al array de posibles vecinos
     /// </summary>
     [SerializeField] GameObject[] _neighbours;
+
+
+
+    /// <summary>
+    /// referencia al objetos con los players
+    /// </summary>
+    [SerializeField] CinemachineBrain _brain;
 
     #endregion
 
@@ -388,7 +396,7 @@ public class GameManager : MonoBehaviour
         if (a)
         {
             _currentHouse = Instantiate(_currentNeighbour.GetComponent<NeighbourScript>().GetNeighbour().prefab, _Neighbour.GetComponent<Transform>());
-            _currentHouse.GetComponent<Transform>().localScale *= 100;
+            _currentHouse.GetComponent<Transform>().localScale *= 50;
         }
         else
         {
