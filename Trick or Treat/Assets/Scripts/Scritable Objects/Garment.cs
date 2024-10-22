@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum TYPE { CUTE, SPOOKY, FUNNY }
 public enum PLACEMENT { TOP, BOTTOM, EXTRA }
-public enum SERIES { NONE, WITCH, CLOWN, DEVIL, PUMPKIN, PIRATE }
+public enum SERIES { NONE, WITCH, CLOWN, DEVIL, PUMPKING, PIRATE, MUMMY, ALIEN, GHOST, DEATH, VAMPIRE }
 
 [CreateAssetMenu(fileName = "New Garment", menuName = "Garment")]
 public class Garment : ScriptableObject
