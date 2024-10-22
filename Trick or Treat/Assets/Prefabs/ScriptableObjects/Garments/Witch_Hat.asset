@@ -16,7 +16,7 @@ MonoBehaviour:
   description: A very cute hat to conjure magic spells!
   prefab: {fileID: 8823404756060498460, guid: 8bcf5e3d7b07fc34c801ad32b946b81a, type: 3}
   placement: 0
-  series: 0
+  series: 1
   cute: 5
   spooky: 3
   funny: 1
