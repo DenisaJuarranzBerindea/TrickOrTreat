@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9641,7 +9641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: dde46fd3489888a45b9a3547409f5602, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: 12, z: -2}
 --- !u!114 &694765062
 MonoBehaviour:
   m_ObjectHideFlags: 0
