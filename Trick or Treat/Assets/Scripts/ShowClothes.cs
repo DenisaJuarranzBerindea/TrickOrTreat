@@ -32,7 +32,8 @@ public class ShowClothes : MonoBehaviour
         if (!dressed)
         {
             //Instanciamos la prenda
-            _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offsetT, _playerTransform.rotation);
+            
+            _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offsetT, _clothes.prefab.transform.rotation);
 
             _prefab.transform.parent = _playerTransform; //Lo hacemos hijo del jugador para que vayan juntos
             dressed = true;
