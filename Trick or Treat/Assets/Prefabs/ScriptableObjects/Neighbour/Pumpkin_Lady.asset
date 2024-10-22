@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mrs. MInerva
   description: She likes pumpkins
-  prefab: {fileID: 0}
+  prefab: {fileID: 4315839030274520361, guid: 27b6350203d69de43adc68744ad86053, type: 3}
   cute: 5
   spooky: 1
   funny: 1
