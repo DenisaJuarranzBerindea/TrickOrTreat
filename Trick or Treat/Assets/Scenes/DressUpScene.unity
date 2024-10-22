@@ -2441,6 +2441,7 @@ GameObject:
   - component: {fileID: 319838019}
   - component: {fileID: 319838018}
   - component: {fileID: 319838017}
+  - component: {fileID: 319838020}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -2511,7 +2512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 319838018}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 319838020}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &319838018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,6 +2563,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319838015}
   m_CullTransparentMesh: 1
+--- !u!114 &319838020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319838015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: d848a1b694e1d06439c8cf7b94b44f89, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 1, y: -2, z: -5}
 --- !u!1 &319862805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +2896,7 @@ GameObject:
   - component: {fileID: 411333455}
   - component: {fileID: 411333454}
   - component: {fileID: 411333453}
+  - component: {fileID: 411333456}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2938,7 +2967,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 411333454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411333456}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &411333454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2977,6 +3018,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411333451}
   m_CullTransparentMesh: 1
+--- !u!114 &411333456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411333451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 2bad058197da64e4a9127244167ddcad, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &440554121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 300.9, y: -420}
+  m_AnchoredPosition: {x: 300.90002, y: -420}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &525302152
@@ -6867,7 +6923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998599987}
   m_Layer: 5
-  m_Name: Botones (1)
+  m_Name: Pirata
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10829,6 +10885,7 @@ GameObject:
   - component: {fileID: 1638150788}
   - component: {fileID: 1638150787}
   - component: {fileID: 1638150786}
+  - component: {fileID: 1638150789}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -10899,7 +10956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1638150787}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1638150789}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1638150787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10938,6 +11007,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638150784}
   m_CullTransparentMesh: 1
+--- !u!114 &1638150789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638150784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 58894010419f29240bfbcdd076efe18c, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 0, y: 0, z: 0}
 --- !u!1 &1652129062
 GameObject:
   m_ObjectHideFlags: 0

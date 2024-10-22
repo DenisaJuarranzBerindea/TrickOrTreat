@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4845744c4dd4784fa449f0df5ce7ce5, type: 3}
-  m_Name: Pirate_Dress
+  m_Name: Pirate_Extra
   m_EditorClassIdentifier: 
   name: 
   description: 
-  prefab: {fileID: 5081199927287416054, guid: bc501905397e63d4981fd13f20cb3d3b, type: 3}
-  placement: 0
+  prefab: {fileID: 5596020259284379309, guid: 7e9b815f91739d142b3193f8def99a26, type: 3}
+  placement: 2
   series: 0
   cute: 0
   spooky: 0
