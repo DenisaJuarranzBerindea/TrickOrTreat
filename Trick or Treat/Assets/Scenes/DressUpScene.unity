@@ -792,8 +792,9 @@ GameObject:
   - component: {fileID: 136340242}
   - component: {fileID: 136340241}
   - component: {fileID: 136340240}
+  - component: {fileID: 136340243}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,7 +863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 136340241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 136340243}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &136340241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +914,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136340238}
   m_CullTransparentMesh: 1
+--- !u!114 &136340243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136340238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: 8f529012fd985a94ab7c3b1d11a291c2, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 1, y: -0.5, z: -3}
 --- !u!1 &139641852
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,8 +4106,9 @@ GameObject:
   - component: {fileID: 571577869}
   - component: {fileID: 571577868}
   - component: {fileID: 571577867}
+  - component: {fileID: 571577870}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Sombrero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4148,7 +4177,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571577868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 571577870}
+        m_TargetAssemblyTypeName: ShowClothes, Assembly-CSharp
+        m_MethodName: show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571577868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4187,6 +4228,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571577865}
   m_CullTransparentMesh: 1
+--- !u!114 &571577870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571577865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b324cc17b48bd43911dc9186de3927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothes: {fileID: 11400000, guid: b63690e8b78411e4a93c7544181e4b3c, type: 2}
+  _playerTransform: {fileID: 2113443104}
+  _offsetT: {x: 1, y: -1, z: -3}
 --- !u!1 &579675103
 GameObject:
   m_ObjectHideFlags: 0
@@ -8086,7 +8142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088321737}
   m_Layer: 5
-  m_Name: Botones (3)
+  m_Name: Calabaza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11234,7 +11290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1732159473}
   m_Layer: 5
-  m_Name: Botones
+  m_Name: Bruja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12571,63 +12627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122270446}
   m_CullTransparentMesh: 1
---- !u!1001 &215186128336081908
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3888627812913415442, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_Name
-      value: alienSombrero
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 135.8429
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -29.22405
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -770.9666
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4520768261034925992, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86139a44853c8a740bacce3cd59dbbb9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12638,4 +12637,3 @@ SceneRoots:
   - {fileID: 1945318872}
   - {fileID: 1576803015}
   - {fileID: 1038383912}
-  - {fileID: 215186128336081908}
