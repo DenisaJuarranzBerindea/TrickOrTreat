@@ -2155,8 +2155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 185d68e48d4a12c4c87a36efda3062ef, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 0.3, y: -0.5, z: -2}
-  rotZ: 0
+  _offsetT: {x: -0.5, y: -0.5, z: -2}
+  rotZ: 23.2
   rotY: 0
 --- !u!114 &228243846
 MonoBehaviour:
