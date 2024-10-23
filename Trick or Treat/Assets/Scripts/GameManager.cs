@@ -2,8 +2,12 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
+using UnityEditor;
+using UnityEditor.Search.Providers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 
@@ -46,7 +50,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     ///  referencia al objeto con todo lo del dressup
     /// </summary>
-    [SerializeField] GameObject _dressup;
+    //[SerializeField] GameObject _dressup;
     /// <summary>
     ///  referencia al objeto con todo lo del resultado
     /// </summary>
@@ -81,6 +85,15 @@ public class GameManager : MonoBehaviour
 
     #region propiedades:
 
+    /// <summary>
+    /// Enum de estados de juego. 
+    /// START = menu inicial de juego.
+    /// GAME = no tengo claro la diferencia entre game y result.
+    /// NEIGHBOUR = estado donde se muestra la 
+    /// DRESS = estado donde se visten los jugadores con cambio de escena.
+    /// RESULT = no tengo claro la diferencia entre game y result.
+    /// END = estado final de juego.
+    /// </summary>
     public enum GameStates { START, GAME, NEIGHBOUR, DRESS, RESULT, END }
     /// <summary>
     /// Estado actual de juego.
@@ -109,12 +122,20 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject); // Evita duplicados
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        //changeScene();
     }
 
     // Update is called once per frame
@@ -143,23 +164,7 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.F))          // PRUEBA PARA PUNTUAR
         {
-            RESULT res = judgeCostumes();
-
-            if (res == RESULT.PLAYER1)
-            {
-                Debug.Log("PLAYER 1");
-                _UIManager.UpdateResultHUD("Player1");
-            }
-            else if (res == RESULT.PLAYER2)
-            {
-                Debug.Log("PLAYER 2");
-                _UIManager.UpdateResultHUD("Player2");
-            }
-            else
-            {
-                Debug.Log("TIE");
-                _UIManager.UpdateResultHUD("Tie");
-            }
+            
         }
         // Gestion de rondas.
         if (_currentState == GameStates.DRESS)
@@ -173,7 +178,12 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                changeScene();
+                updateResultUI();
+                SceneManager.LoadScene("InesScene");
+                Debug.Log("//------------------------------------//");
                 changeState(GameStates.RESULT);
+
             }
         }
         if (_currentState == GameStates.GAME)
@@ -185,25 +195,6 @@ public class GameManager : MonoBehaviour
             else
             {
                 _UIManager.UpdateGameHUD(_nRound);
-
-
-                RESULT res = judgeCostumes();
-
-                if (res == RESULT.PLAYER1)
-                {
-                    Debug.Log("PLAYER 1");
-                    _UIManager.UpdateResultHUD("Player1");
-                }
-                else if (res == RESULT.PLAYER2)
-                {
-                    Debug.Log("PLAYER 2");
-                    _UIManager.UpdateResultHUD("Player2");
-                }
-                else
-                {
-                    Debug.Log("TIE");
-                    _UIManager.UpdateResultHUD("Tie");
-                }
             }
         }
         if (_currentState == GameStates.NEIGHBOUR)
@@ -213,12 +204,15 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("GAME DENISIEST PART");
 
                 _neighbourtime -= Time.deltaTime;
-                Debug.Log(_neighbourtime);
+                //Debug.Log(_neighbourtime);
             }
             else
             {
                 _nRound++;
                 changeState(GameStates.DRESS);
+                Debug.Log("//------------------------------------//");
+                SceneManager.LoadScene("DressUpScene"); // Cambio de escena a la de vestirse.
+                changeScene();
             }
         }
         if (_currentState == GameStates.RESULT)
@@ -226,14 +220,11 @@ public class GameManager : MonoBehaviour
             if (_resultTime > 5)
             {
                 //Debug.Log("END AQUI FALTAN LOS RESULTADOS");
-
                 _resultTime -= Time.deltaTime;
-
             }
             else
             {
                 changeState(GameStates.GAME);
-
             }
         }
 
@@ -274,7 +265,7 @@ public class GameManager : MonoBehaviour
 
     private void updateState()
     {
-        Debug.Log(_nextState + " hola");
+        //Debug.Log(_nextState + " hola");
 
         if (_currentState == GameStates.RESULT && _nextState == GameStates.GAME)
         {
@@ -282,17 +273,17 @@ public class GameManager : MonoBehaviour
             setUpResult(false);
             setUpGame(true);
 
-            Debug.Log("Enter Game.");
+            //Debug.Log("Enter Game.");
         }
         else if (_currentState == GameStates.GAME && _nextState == GameStates.END)
         {
             _currentState = _nextState;
-            Debug.Log("Enter End.");
+            //Debug.Log("Enter End.");
         }
         else if (_currentState == GameStates.END && _nextState == GameStates.START)
         {
             _currentState = _nextState;
-            Debug.Log("Enter Start.");
+            //Debug.Log("Enter Start.");
         }
         else if (_currentState == GameStates.START || _currentState == GameStates.GAME && _nextState == GameStates.NEIGHBOUR)
         {
@@ -301,7 +292,7 @@ public class GameManager : MonoBehaviour
             setUpNeighbour(true);
             _neighbourtime = 10.0f;
 
-            Debug.Log("Enter Neighbour.");
+            //Debug.Log("Enter Neighbour.");
         }
         else if (_currentState == GameStates.NEIGHBOUR || _currentState == GameStates.NEIGHBOUR && _nextState == GameStates.DRESS)
         {
@@ -309,21 +300,21 @@ public class GameManager : MonoBehaviour
             _timeToDress = 20.0f;
             setUpDressUp(true);
             setUpNeighbour(false);
-            Debug.Log("Enter Dress.");
+            //Debug.Log("Enter Dress.");
         }
         else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.GAME)
         {
             _currentState = _nextState;
             setUpGame(true);
             setUpDressUp(false);
-            Debug.Log("Enter game");
+            //Debug.Log("Enter game");
         }
         else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.RESULT)
         {
             _currentState = _nextState;
             setUpResult(true);
             setUpDressUp(false);
-            Debug.Log("Enter result.");
+            //Debug.Log("Enter result.");
         }
         else if (_currentState == GameStates.GAME || _currentState == GameStates.GAME && _nextState == GameStates.NEIGHBOUR)
         {
@@ -331,9 +322,19 @@ public class GameManager : MonoBehaviour
             setUpGame(false);
             setUpNeighbour(true);
             _neighbourtime = 10.0f;
-            Debug.Log("HOLA PAIGROOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+            //Debug.Log("HOLA PAIGROOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
         }
 
+    }
+
+    // Vuelve a poner las referencias perdidas tras volver a InesScene.
+    void changeScene()
+    {
+        Debug.Log("Encontrar cosas.");
+        
+        _player1 = GameObject.Find("Player1");
+        _player2 = GameObject.Find("Player2");
+        _players = GameObject.Find("Players");
     }
 
     #endregion
@@ -342,7 +343,23 @@ public class GameManager : MonoBehaviour
 
     #region metodos de UI:
 
-    // ...cri...cri...cri..
+    void updateResultUI()
+    {
+        RESULT res = judgeCostumes();
+
+        if (res == RESULT.PLAYER1)
+        {
+            _UIManager.UpdateResultHUD("Player1");
+        }
+        else if (res == RESULT.PLAYER2)
+        {
+            _UIManager.UpdateResultHUD("Player2");
+        }
+        else
+        {
+            _UIManager.UpdateResultHUD("Tie");
+        }
+    }
 
     #endregion
 
@@ -354,13 +371,15 @@ public class GameManager : MonoBehaviour
 
     public RESULT judgeCostumes()
     {
+        Debug.Log("Juzgacion.");
+
         // puntuaciones de los jugadores
         Puntuacion p1 = _currentNeighbour.GetComponent<NeighbourScript>().judgeCostume(_player1);
 
 
         Puntuacion p2 = _currentNeighbour.GetComponent<NeighbourScript>().judgeCostume(_player2);
 
-        
+
         return decideVerdict(p1, p2);
     }
 
@@ -404,7 +423,6 @@ public class GameManager : MonoBehaviour
 
     void setUpDressUp(bool a)
     {
-        _dressup.SetActive(a);
         _players.SetActive(a);
     }
 
@@ -436,10 +454,9 @@ public class GameManager : MonoBehaviour
 
     void setUpResult(bool a)
     {
-        _result.SetActive(a);
+        /*_result.SetActive(a);
 
-        int aux = (int)judgeCostumes();
-        Debug.Log(aux);
+        int aux = (int)judgeCostumes();*/
     }
 
     void setUpGame(bool a)
