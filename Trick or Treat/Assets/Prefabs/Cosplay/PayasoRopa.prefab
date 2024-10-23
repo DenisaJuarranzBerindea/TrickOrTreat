@@ -22,19 +22,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 161.2573
+      value: 229.67216
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -33.762936
+      value: -77.753296
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -150.88673
+      value: -385.3409
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.62932044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.7771459
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -102
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -64,10 +64,38 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 662360308283424114, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
+    - target: {fileID: 896592419784031610, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
     - target: {fileID: 919132149155446097, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
       propertyPath: m_Name
       value: PayasoRopa
       objectReference: {fileID: 0}
+    - target: {fileID: 1748208142335702236, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
+    - target: {fileID: 3187810053995672960, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
+    - target: {fileID: 4128867096538593067, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
+    - target: {fileID: 7786177397952715813, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
+    - target: {fileID: 9106369202026873430, guid: d44fc407c9cc1bd46bdf61f5cf029dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f00eb8d2e0fc8c94684f380904b56546, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
