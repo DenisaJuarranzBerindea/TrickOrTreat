@@ -6130,7 +6130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 66d2f1b3bfdc1d1438632c1576e9305f, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: -2, z: -5}
+  _offsetT: {x: 1, y: -4, z: -7}
   rotZ: 0
   rotY: 0
 --- !u!1 &559991138
@@ -16442,9 +16442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: a5812fc0080e94a4e8d79230951c8db1, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 1, y: 0, z: -5}
-  rotZ: 0
-  rotY: 0
+  _offsetT: {x: 0, y: 0, z: -3}
+  rotZ: 25.1
+  rotY: 1.05
 --- !u!114 &1733404380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17122,8 +17122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 66d2f1b3bfdc1d1438632c1576e9305f, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 0, y: -2, z: -5}
-  rotZ: 0
+  _offsetT: {x: 0, y: -4, z: -5}
+  rotZ: 28.6
   rotY: 0
 --- !u!114 &1849946595
 MonoBehaviour:
