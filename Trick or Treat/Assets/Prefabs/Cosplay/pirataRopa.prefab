@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5606942799766576716}
   - component: {fileID: 8818056111745290729}
   - component: {fileID: 6738774935505380643}
+  - component: {fileID: 6034836628434768132}
   m_Layer: 0
   m_Name: pirataRopa
   m_TagString: Untagged
@@ -84,3 +85,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6034836628434768132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081199927287416054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd74d701cadcf84a881dc7f1fc30609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

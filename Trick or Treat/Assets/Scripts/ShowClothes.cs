@@ -44,8 +44,19 @@ public class ShowClothes : MonoBehaviour
                 if (_playerTransform.gameObject.GetComponent<OutfitScript>().getBoolTop()
                     && _clothes.placement == PLACEMENT.TOP)
                 {
-                    //Va a tocar destruir los hijos del player
-
+                    RemoveTopChildren();
+                }
+                //Si Ya tiene un bottom quitamos la prenda
+                else if (_playerTransform.gameObject.GetComponent<OutfitScript>().getBoolTop()
+                    && _clothes.placement == PLACEMENT.BOTTOM)
+                {
+                    RemoveBottomChildren();
+                }
+                //Si Ya tiene un extra quitamos la prenda
+                else if (_playerTransform.gameObject.GetComponent<OutfitScript>().getBoolTop()
+                    && _clothes.placement == PLACEMENT.EXTRA)
+                {
+                    RemoveExtraChildren();
                 }
 
                 _playerTransform.gameObject.GetComponent<OutfitScript>().addGarment(_clothes, (int)_clothes.placement);
@@ -73,6 +84,60 @@ public class ShowClothes : MonoBehaviour
         }
         
     }
+
+    private void RemoveTopChildren()
+    {
+        //Buscamos el hijo que queremos eliminar
+        int i = 0;
+
+        while (i < _playerTransform.childCount)
+        {
+            Transform child = _playerTransform.GetChild(i);
+
+            if (child.gameObject.GetComponent<istop>() != null)
+            {
+                Destroy(child.gameObject);
+            }
+            i++;
+        }
+    }
+    
+    private void RemoveBottomChildren()
+    {
+        //Buscamos el hijo que queremos eliminar
+        int i = 0;
+
+        while (i < _playerTransform.childCount)
+        {
+            Transform child = _playerTransform.GetChild(i);
+
+            if (child.gameObject.GetComponent<isBottom>() != null)
+            {
+                Destroy(child.gameObject);
+            }
+            i++;
+        }
+    }
+    private void RemoveExtraChildren()
+    {
+        //Buscamos el hijo que queremos eliminar
+        int i = 0;
+
+        while (i < _playerTransform.childCount)
+        {
+            Transform child = _playerTransform.GetChild(i);
+
+            if (child.gameObject.GetComponent<isExtra>() != null)
+            {
+                Destroy(child.gameObject);
+            }
+            i++;
+        }
+    }
+
+
+
+
 
     //Metodo para quitar la ropa
     #endregion
