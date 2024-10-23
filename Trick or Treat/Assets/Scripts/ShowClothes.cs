@@ -23,7 +23,10 @@ public class ShowClothes : MonoBehaviour
     private Vector3 _offsetT;    //Para colocar bien cada prenda
 
     [SerializeField]
-    private float rot;    //Rotacion en zs
+    private float rotZ;    //Rotacion en y
+
+    [SerializeField]
+    private float rotY;    //Rotacion en y
 
     #endregion
 
@@ -36,7 +39,8 @@ public class ShowClothes : MonoBehaviour
         {
             //Instanciamos la prenda
             _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offsetT, _clothes.prefab.transform.rotation);
-            _prefab.transform.Rotate(rot * Vector3.forward, Space.Self);
+            _prefab.transform.Rotate(rotZ * Vector3.forward, Space.Self);
+            _prefab.transform.Rotate(rotY * Vector3.up, Space.Self);
             _prefab.transform.parent = _playerTransform; //Lo hacemos hijo del jugador para que vayan juntos
             dressed = true;
 
