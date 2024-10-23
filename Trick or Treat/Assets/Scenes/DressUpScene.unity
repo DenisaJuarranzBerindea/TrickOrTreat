@@ -8559,8 +8559,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: fd85a06492564cf4fbca30d4ffc1067e, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 0.5, y: 0, z: -1.5}
-  rotZ: 0
+  _offsetT: {x: -0.5, y: 0, z: -1.5}
+  rotZ: 30
   rotY: 0
 --- !u!114 &737061712
 MonoBehaviour:
@@ -15080,7 +15080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 451188e1a9b4f3c4d813b16cb3b29b27, type: 2}
   _playerTransform: {fileID: 877644384}
-  _offsetT: {x: 1.5, y: -1, z: -7}
+  _offsetT: {x: -1.5, y: -1, z: -7}
   rotZ: 0
   rotY: 0
 --- !u!114 &1626621766
