@@ -15,7 +15,7 @@ MonoBehaviour:
   name: 
   description: 
   prefab: {fileID: 4363794250075442125, guid: c21da27d89c2c5e4f8f598501e35c764, type: 3}
-  placement: 0
+  placement: 2
   series: 10
   cute: 3
   spooky: 5

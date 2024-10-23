@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4845744c4dd4784fa449f0df5ce7ce5, type: 3}
   m_Name: Witch_Hat
   m_EditorClassIdentifier: 
-  name: Witch hat
-  description: A very cute hat to conjure magic spells!
+  name: 
+  description: 
   prefab: {fileID: 8823404756060498460, guid: 8bcf5e3d7b07fc34c801ad32b946b81a, type: 3}
   placement: 0
   series: 1
-  cute: 5
-  spooky: 3
-  funny: 1
+  cute: 0
+  spooky: 0
+  funny: 0

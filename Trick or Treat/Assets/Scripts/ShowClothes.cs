@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShowClothes : MonoBehaviour
@@ -37,6 +38,20 @@ public class ShowClothes : MonoBehaviour
     {
         if (!dressed)
         {
+            if (_playerTransform.gameObject.GetComponent<OutfitScript>() != null)
+            {
+                //Si Ya tiene un top quitamos la prenda
+                if (_playerTransform.gameObject.GetComponent<OutfitScript>().getBoolTop()
+                    && _clothes.placement == PLACEMENT.TOP)
+                {
+                    //Va a tocar destruir los hijos del player
+
+                }
+
+                _playerTransform.gameObject.GetComponent<OutfitScript>().addGarment(_clothes, (int)_clothes.placement);
+
+            }
+
             //Instanciamos la prenda
             _prefab = Instantiate(_clothes.prefab, _playerTransform.position + _offsetT, _clothes.prefab.transform.rotation);
             _prefab.transform.Rotate(rotZ * Vector3.forward, Space.Self);
@@ -44,10 +59,6 @@ public class ShowClothes : MonoBehaviour
             _prefab.transform.parent = _playerTransform; //Lo hacemos hijo del jugador para que vayan juntos
             dressed = true;
 
-            if (_playerTransform.gameObject.GetComponent<OutfitScript>() != null)
-            {
-                _playerTransform.gameObject.GetComponent<OutfitScript>().addGarment(_clothes, (int)_clothes.placement);
-            }
         }
         else
         {

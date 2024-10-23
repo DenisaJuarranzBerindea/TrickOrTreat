@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class OutfitScript : MonoBehaviour
 {
+    #region properties
+
+    bool topBool = false;
+
+    bool bottomBool = false;
+
+    bool extraBool = false;
+
+    #endregion
+
     [SerializeField]
     Garment top;
     [SerializeField]
@@ -27,12 +37,15 @@ public class OutfitScript : MonoBehaviour
         {
             case 0:
                 top = g;
+                topBool = true;
                 break;
             case 1:
                 bottom = g;
+                bottomBool = true;
                 break;
             case 2:
                 extra = g;
+                extraBool = true;
                 break;
             default:
 
@@ -45,12 +58,15 @@ public class OutfitScript : MonoBehaviour
         {
             case 0:
                 top = null;
+                topBool = false;
                 break;
             case 1:
                 bottom = null;
+                bottomBool = false;
                 break;
             case 2:
                 extra = null;
+                extraBool = false;
                 break;
             default:
 
@@ -64,4 +80,9 @@ public class OutfitScript : MonoBehaviour
     public Garment getTop() { return top; }
     public Garment getBottom() { return bottom; }
     public Garment getExtra() { return extra; }
+
+    public bool getBoolTop() { return topBool; }
+    public bool getBoolBottom() { return bottomBool; }
+    public bool getBoolExtra() { return extraBool; }
+
 }
