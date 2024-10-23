@@ -171,7 +171,6 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                _nRound++;
                 changeState(GameStates.RESULT);
             }
         }
@@ -222,7 +221,7 @@ public class GameManager : MonoBehaviour
 
     //--------------------------------------------------------------------------------------------------------//
 
-    #region metodos de iniciales:
+    #region metodos de iniciales (registro de metodos):
 
     public void RegisterUIManager(UIManager uiManager)
     {
@@ -234,21 +233,23 @@ public class GameManager : MonoBehaviour
     //--------------------------------------------------------------------------------------------------------//
 
     #region metodos de estados:
-
     public void RequestStateChange(GameManager.GameStates newState)
     {
         changeState(newState);
     }
+
     public GameStates getCurrentState()
     {
         return _currentState;
     }
+
     private void changeState(GameStates state)
     {
         _nextState = state;
         _UIManager.SetMenu(state);
         updateState();
     }
+
     private void updateState()
     {
         Debug.Log(_nextState + " hola");
@@ -319,7 +320,7 @@ public class GameManager : MonoBehaviour
 
     #region metodos de UI:
 
-
+    // ...cri...cri...cri..
 
     #endregion
 
@@ -337,7 +338,7 @@ public class GameManager : MonoBehaviour
 
         Puntuacion p2 = _currentNeighbour.GetComponent<NeighbourScript>().judgeCostume(_player2);
 
-        //
+        
         return decideVerdict(p1, p2);
     }
 
@@ -417,9 +418,7 @@ public class GameManager : MonoBehaviour
 
         int aux = (int)judgeCostumes();
         Debug.Log(aux);
-
     }
-
 
     void setUpGame(bool a)
     {

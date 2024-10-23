@@ -5,7 +5,11 @@ using UnityEngine.Playables;
 
 public class CinematicCamera : MonoBehaviour
 {
-    // Update is called once per frame
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    #region awake, start y update:
+
     void Update()
     {
         // Usted pudiere ver este fragmento de codigo y pensar que es una ganyanada, y yo le comunico a usted que efectivamente tiene razon es una ganyanada de manual.
@@ -14,4 +18,9 @@ public class CinematicCamera : MonoBehaviour
             this.GetComponentInParent<PlayableDirector>().time = 0;
         }
     }
+
+    #endregion
+
+    //--------------------------------------------------------------------------------------------------------//
+
 }
