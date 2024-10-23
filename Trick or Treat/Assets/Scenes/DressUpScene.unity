@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 2e8cd3c4ffba7fc44b6d35d1cbc9a747, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 12, z: 1}
+  _offsetT: {x: 0, y: 0, z: 1}
   rotZ: 0
   rotY: 0
 --- !u!114 &57972650
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 9f50f08af38cdf644a7f9039ce48e1ad, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 18, y: 17, z: -6}
+  _offsetT: {x: 18, y: 5, z: -6}
   rotZ: 0
   rotY: 0
 --- !u!114 &58661801
@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 185d68e48d4a12c4c87a36efda3062ef, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.5, y: -0.5, z: -2}
+  _offsetT: {x: -0.5, y: -12.05, z: -2}
   rotZ: 23.2
   rotY: 0
 --- !u!114 &228243846
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 2bad058197da64e4a9127244167ddcad, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.5, y: 0, z: 0}
+  _offsetT: {x: -0.5, y: -12.14, z: 0}
   rotZ: -0.2
   rotY: -29.6
 --- !u!114 &270769640
@@ -3401,7 +3401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 1d50c30dc97ef1f478acbfeb69d5cc03, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.5, y: 0, z: -3}
+  _offsetT: {x: -0.5, y: -12.14, z: -3}
   rotZ: 24.2
   rotY: 0
 --- !u!114 &304109654
@@ -3686,7 +3686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 8f529012fd985a94ab7c3b1d11a291c2, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1, y: -0.5, z: -3}
+  _offsetT: {x: -1, y: -12.05, z: -3}
   rotZ: 0
   rotY: 0
 --- !u!114 &312107958
@@ -5126,7 +5126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: d848a1b694e1d06439c8cf7b94b44f89, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1, y: -2, z: -5}
+  _offsetT: {x: -1, y: -14.14, z: -5}
   rotZ: 15.5
   rotY: 0
 --- !u!114 &465094413
@@ -5583,7 +5583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 56bded8b14d1e1b4aaf6fe7757a2ae3d, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.4, y: -0.3, z: -1.9}
+  _offsetT: {x: -0.4, y: -12.03, z: -1.9}
   rotZ: 0.63
   rotY: 24
 --- !u!114 &510422959
@@ -5734,7 +5734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 5658f11bb7cbeea4f99e509bf4b3465e, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 0
   rotY: 0
 --- !u!114 &511536034
@@ -6783,7 +6783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: f33bd5da046604742ac0e28273433832, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.5, y: 0, z: -1.5}
+  _offsetT: {x: -0.5, y: -12.14, z: -1.5}
   rotZ: 2.61
   rotY: 24.8
 --- !u!114 &593559640
@@ -8564,7 +8564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: fd85a06492564cf4fbca30d4ffc1067e, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.5, y: 0, z: -1.5}
+  _offsetT: {x: -0.5, y: -12.14, z: -1.5}
   rotZ: 30
   rotY: 0
 --- !u!114 &737061712
@@ -9450,7 +9450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: c4b2d3aa5b60e3847960a7dd350f7540, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: -3}
+  _offsetT: {x: 0, y: -12.14, z: -3}
   rotZ: 0
   rotY: 0
 --- !u!114 &894115293
@@ -10679,7 +10679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: b63690e8b78411e4a93c7544181e4b3c, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1, y: -1, z: -3}
+  _offsetT: {x: -1, y: -13, z: -3}
   rotZ: 23.6
   rotY: 0
 --- !u!114 &1039003688
@@ -11445,7 +11445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 3fcd551f5dc87ac46b20011f936b0497, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -0.2, y: 11, z: -2}
+  _offsetT: {x: -0.2, y: -1, z: -2}
   rotZ: 30
   rotY: 0
 --- !u!114 &1118088826
@@ -11919,7 +11919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 3fbe5f0f003aebd46a0857548ae5d120, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 0
   rotY: 0
 --- !u!114 &1221598479
@@ -13008,7 +13008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 829f8a1760276e44a91092a74f96625d, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: -2}
+  _offsetT: {x: 0, y: -12.14, z: -2}
   rotZ: 0
   rotY: 0
 --- !u!114 &1350658110
@@ -13327,7 +13327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 07bd35b5960b21e4096495e706fe197c, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 0
   rotY: 0
 --- !u!114 &1370149188
@@ -15084,7 +15084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 451188e1a9b4f3c4d813b16cb3b29b27, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1.5, y: -1, z: -7}
+  _offsetT: {x: -1.5, y: -13, z: -7}
   rotZ: 0
   rotY: 0
 --- !u!114 &1626621766
@@ -15977,7 +15977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: b52cffe2cc076a143abd01f008d16748, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1, y: 0, z: -4}
+  _offsetT: {x: -1, y: -12.14, z: -4}
   rotZ: 12.9
   rotY: 0
 --- !u!114 &1696428724
@@ -16446,7 +16446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: a5812fc0080e94a4e8d79230951c8db1, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: -3}
+  _offsetT: {x: 0, y: -12.14, z: -3}
   rotZ: 25.1
   rotY: 1.05
 --- !u!114 &1733404380
@@ -16975,7 +16975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 42bace9f066d3844fbafb6ea3be6d4c1, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 0
   rotY: 0
 --- !u!114 &1848121705
@@ -17126,7 +17126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 66d2f1b3bfdc1d1438632c1576e9305f, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: -4, z: -5}
+  _offsetT: {x: 0, y: -16, z: -5}
   rotZ: 28.6
   rotY: 0
 --- !u!114 &1849946595
@@ -17277,7 +17277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: de8e43122aa51d14db9fb5d53719f874, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: -1.6, y: -2, z: -8}
+  _offsetT: {x: -1.6, y: -14, z: -8}
   rotZ: 0
   rotY: 22.3
 --- !u!114 &1887045472
@@ -17428,7 +17428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 58894010419f29240bfbcdd076efe18c, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 19.2
   rotY: 0
 --- !u!114 &1903824885
@@ -17934,7 +17934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 9a9e8b21f27f89841a6e1658fdb5f4e2, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 1.3, y: 24, z: -11}
+  _offsetT: {x: 1.3, y: 12, z: -11}
   rotZ: 0
   rotY: 0
 --- !u!114 &1965144490
@@ -18627,7 +18627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 6c95fbbf8ae92f244b4e2c3e61a8aac5, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -12.14, z: 0}
   rotZ: 0
   rotY: 0
 --- !u!114 &2074169220
@@ -18878,7 +18878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 1dce14ca359008049bf8a21b50f45d13, type: 2}
   _playerTransform: {fileID: 593471397}
-  _offsetT: {x: 14, y: 60, z: -5}
+  _offsetT: {x: 14, y: 48, z: -5}
   rotZ: 0
   rotY: 0
 --- !u!114 &2140192760
