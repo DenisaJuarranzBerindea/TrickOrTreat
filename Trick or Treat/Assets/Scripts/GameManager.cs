@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
     /// Tiempo que falta para vestirse.
     /// </summary>
     private float _timeToDress = 20.0f;
-    private float _neighbourtime = 5.0f;
+    private float _neighbourtime = 10.0f;
     private float _resultTime = 5.0f;
     /// <summary>
     /// Ronda actual.
@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
         // Gestion de rondas.
         if (_currentState == GameStates.DRESS)
         {
-            if (_timeToDress > 19)
+            if (_timeToDress > 19) // GENTE AQUI PAIGRO AQUI INES AQUI : cambiar el 19 por un 0.
             {
                 _UIManager.UpdateDressHUD(_timeToDress);
                 _timeToDress -= Time.deltaTime;
@@ -193,6 +193,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("GAME DENISIEST PART");
 
                 _neighbourtime -= Time.deltaTime;
+                Debug.Log(_neighbourtime);
             }
             else
             {
@@ -277,7 +278,7 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             setUpGame(false);
             setUpNeighbour(true);
-            _neighbourtime = 5.0f;
+            _neighbourtime = 10.0f;
 
             Debug.Log("Enter Neighbour.");
         }
@@ -308,7 +309,7 @@ public class GameManager : MonoBehaviour
             _currentState = _nextState;
             setUpGame(false);
             setUpNeighbour(true);
-            _neighbourtime = 5.0f;
+            _neighbourtime = 10.0f;
             Debug.Log("HOLA PAIGROOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
         }
 
