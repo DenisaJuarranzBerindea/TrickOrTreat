@@ -46,11 +46,11 @@ public class GameManager : MonoBehaviour
     /// <summary>
     ///  referencia al objeto con todo lo del dressup
     /// </summary>
-    [SerializeField] GameObject _dressup;    
+    [SerializeField] GameObject _dressup;
     /// <summary>
     ///  referencia al objeto con todo lo del resultado
     /// </summary>
-    [SerializeField] GameObject _result;    
+    [SerializeField] GameObject _result;
     /// <summary>
     ///  referencia al objeto con todo lo de enseñar las casas
     /// </summary>
@@ -392,15 +392,18 @@ public class GameManager : MonoBehaviour
         if (a)
         {
             _currentHouse = Instantiate(_currentNeighbour.GetComponent<NeighbourScript>().GetNeighbour().prefab, _Neighbour.GetComponent<Transform>());
-            _currentHouse.GetComponent<Transform>().localScale *= 200;
+            Vector3 pos = new Vector3(933, 192, -28);
+            //Quaternion rot = new Quaternion(0, 90, 0, 1);
+            Vector3 sca = new Vector3(30, 30, 30);
+            _currentHouse.GetComponent<Transform>().localPosition = pos;
+            //_currentHouse.GetComponent<Transform>().localRotation.Set(0, 90, 0, 1);
+            _currentHouse.GetComponent<Transform>().localScale = sca;
         }
         else
         {
             Destroy(_currentHouse);
-
         }
     }
-
 
     void generateNewNeighbour()
     {
@@ -414,14 +417,14 @@ public class GameManager : MonoBehaviour
 
         int aux = (int)judgeCostumes();
         Debug.Log(aux);
-        
+
     }
 
 
-    void setUpGame(bool a) 
+    void setUpGame(bool a)
     {
         generateNewNeighbour();
-        _game.SetActive(a);        
+        _game.SetActive(a);
     }
 
     #endregion
