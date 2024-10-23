@@ -75,8 +75,23 @@ public class NeighbourScript : MonoBehaviour
         aux.theme = themeCount;
 
         // ORIGINALIDAD
-        aux.orig = 0;
 
+        // todos son distintos
+        if (top.series != bot.series 
+            && top.series != ex.series 
+            && bot.series != ex.series)
+        {
+            aux.orig = 3;
+        }
+        else if ((top.series != bot.series) || (top.series != ex.series)
+            && ((ex.series != bot.series) || (ex.series != top.series))
+            && ((bot.series != ex.series) || (bot.series != top.series)))
+        {
+            aux.orig = 2;
+        }
+        else { 
+            aux.orig = 1;
+        }
 
         return aux;
     }

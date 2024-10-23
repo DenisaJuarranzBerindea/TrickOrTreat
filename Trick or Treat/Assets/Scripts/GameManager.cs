@@ -407,7 +407,8 @@ public class GameManager : MonoBehaviour
         puntos2 += p2.theme;
         puntos1 += p1.theme;
 
-
+        puntos1 += p1.orig;
+        puntos2 += p2.orig;
 
         if (puntos1 > puntos2)
             return RESULT.PLAYER1;
