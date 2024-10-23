@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     /// Referencia al tiempo que queda.
     /// </summary>
     [SerializeField] private TMP_Text _remainingTimeTMP;
+    [SerializeField] private TMP_Text _PlayerTurn;
     /// <summary>
     /// Referencia a la ronda que es.
     /// </summary>
@@ -86,6 +87,8 @@ public class UIManager : MonoBehaviour
         _gameMenu.SetActive(false);
         _dressMenu.SetActive(false);
         _endMenu.SetActive(false);
+
+        
     }
 
     // Update is called once per frame
@@ -156,6 +159,11 @@ public class UIManager : MonoBehaviour
     public void UpdateDressHUD(float remainingTime)
     {
         _remainingTimeTMP.text = Mathf.Round(remainingTime) + "";
+
+        if (remainingTime <= 10)
+        {
+            _PlayerTurn.text = ("Player 2");
+        }
     }
 
     public void UpdateGameHUD(int round)
