@@ -75,7 +75,6 @@ public class NeighbourScript : MonoBehaviour
         aux.theme = themeCount;
 
         // ORIGINALIDAD
-
         aux.orig = 0;
 
 

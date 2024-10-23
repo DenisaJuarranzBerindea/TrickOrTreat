@@ -211,8 +211,9 @@ public class GameManager : MonoBehaviour
                 _nRound++;
                 changeState(GameStates.DRESS);
                 Debug.Log("//------------------------------------//");
-                SceneManager.LoadScene("DressUpScene"); // Cambio de escena a la de vestirse.
+                Debug.Log("//OMFG//");
                 changeScene();
+                SceneManager.LoadScene("DressUpScene"); // Cambio de escena a la de vestirse.
             }
         }
         if (_currentState == GameStates.RESULT)
@@ -298,7 +299,7 @@ public class GameManager : MonoBehaviour
         {
             _currentState = _nextState;
             _timeToDress = 20.0f;
-            setUpDressUp(true);
+            //setUpDressUp(true);
             setUpNeighbour(false);
             //Debug.Log("Enter Dress.");
         }
@@ -306,7 +307,7 @@ public class GameManager : MonoBehaviour
         {
             _currentState = _nextState;
             setUpGame(true);
-            setUpDressUp(false);
+           // setUpDressUp(false);
             //Debug.Log("Enter game");
         }
         else if (_currentState == GameStates.DRESS || _currentState == GameStates.DRESS && _nextState == GameStates.RESULT)
