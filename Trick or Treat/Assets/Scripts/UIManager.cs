@@ -11,6 +11,10 @@ public class UIManager : MonoBehaviour
     #region referencias:
 
     /// <summary>
+    /// Instancia del GameManager.
+    /// </summary>
+    public static UIManager Instance { get; private set; }
+    /// <summary>
     /// Referencia al tiempo que queda.
     /// </summary>
     [SerializeField] private TMP_Text _remainingTimeTMP;
@@ -63,7 +67,15 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject); // Evita duplicados
+        }
     }
     // Start is called before the first frame update
     void Start()
