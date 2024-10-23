@@ -164,8 +164,10 @@ public class GameManager : MonoBehaviour
         // Gestion de rondas.
         if (_currentState == GameStates.DRESS)
         {
-            if (_timeToDress > 19) // GENTE AQUI PAIGRO AQUI INES AQUI : cambiar el 19 por un 0.
+            if (_timeToDress > 0) // GENTE AQUI PAIGRO AQUI INES AQUI : cambiar el 19 por un 0.
             {
+                // INES AQUI
+
                 _UIManager.UpdateDressHUD(_timeToDress);
                 _timeToDress -= Time.deltaTime;
             }
@@ -182,8 +184,26 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-
                 _UIManager.UpdateGameHUD(_nRound);
+
+
+                RESULT res = judgeCostumes();
+
+                if (res == RESULT.PLAYER1)
+                {
+                    Debug.Log("PLAYER 1");
+                    _UIManager.UpdateResultHUD("Player1");
+                }
+                else if (res == RESULT.PLAYER2)
+                {
+                    Debug.Log("PLAYER 2");
+                    _UIManager.UpdateResultHUD("Player2");
+                }
+                else
+                {
+                    Debug.Log("TIE");
+                    _UIManager.UpdateResultHUD("Tie");
+                }
             }
         }
         if (_currentState == GameStates.NEIGHBOUR)
@@ -205,7 +225,8 @@ public class GameManager : MonoBehaviour
         {
             if (_resultTime > 5)
             {
-                Debug.Log("END AQUI FALTAN LOS RESULTADOS");
+                //Debug.Log("END AQUI FALTAN LOS RESULTADOS");
+
                 _resultTime -= Time.deltaTime;
 
             }
