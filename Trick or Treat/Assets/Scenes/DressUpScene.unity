@@ -5628,7 +5628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: 66d2f1b3bfdc1d1438632c1576e9305f, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 0, y: -2, z: -5}
 --- !u!1 &528163090
 GameObject:
   m_ObjectHideFlags: 0
@@ -10539,7 +10539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 298, y: -365}
+  m_AnchoredPosition: {x: 298.00006, y: -365}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1043940347
@@ -18207,7 +18207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clothes: {fileID: 11400000, guid: a5812fc0080e94a4e8d79230951c8db1, type: 2}
   _playerTransform: {fileID: 2113443104}
-  _offsetT: {x: 0, y: 0, z: 0}
+  _offsetT: {x: 1, y: 0, z: -5}
 --- !u!1 &2031047437
 GameObject:
   m_ObjectHideFlags: 0
