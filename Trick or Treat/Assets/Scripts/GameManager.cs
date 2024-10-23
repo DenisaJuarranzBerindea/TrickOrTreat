@@ -7,8 +7,6 @@ using UnityEngine;
 using UnityEngine.XR;
 
 
-
-
 public enum RESULT { PLAYER1, PLAYER2, TIE };
 
 public class GameManager : MonoBehaviour
@@ -327,7 +325,7 @@ public class GameManager : MonoBehaviour
 
     //--------------------------------------------------------------------------------------------------------//
 
-    #region PUNTOS
+    #region PUNTOS:
 
     public void setNeighbour(GameObject n) { _currentNeighbour = n; }
 
@@ -379,9 +377,7 @@ public class GameManager : MonoBehaviour
 
     //--------------------------------------------------------------------------------------------------------//
 
-
-    #region setup
-
+    #region setup:
 
     void setUpDressUp(bool a)
     {
@@ -396,7 +392,7 @@ public class GameManager : MonoBehaviour
         if (a)
         {
             _currentHouse = Instantiate(_currentNeighbour.GetComponent<NeighbourScript>().GetNeighbour().prefab, _Neighbour.GetComponent<Transform>());
-            _currentHouse.GetComponent<Transform>().localScale *= 50;
+            _currentHouse.GetComponent<Transform>().localScale *= 200;
         }
         else
         {
@@ -430,6 +426,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-
+    //--------------------------------------------------------------------------------------------------------//
 
 }
